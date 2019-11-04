@@ -3,6 +3,7 @@ from math import sqrt as sqr
 from math import sin
 from math import cos
 from math import tan 
+from random import randint
 class Application(Frame):
     """
     An example of a calculator app developed using the 
@@ -129,8 +130,8 @@ class Application(Frame):
         master.bind("5", lambda event, char="5", btn=self.five_bttn: self.add_chr(char, btn))
         master.bind("4", lambda event, char="4", btn=self.four_bttn: self.add_chr(char, btn))
         master.bind("3", lambda event, char="3", btn=self.three_bttn: self.add_chr(char, btn))
-        master.bind("2", lambda event, char="2", btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char="Kyle", btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("2", lambda event, char=randint(1,12), btn=self.two_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char=randint(1,20), btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("0", lambda event, char="0", btn=self.zero_bttn: self.add_chr(char, btn))
         master.bind("*", lambda event, char="×", btn=self.mult_bttn: self.add_chr(char, btn))
         master.bind("/", lambda event, char="÷", btn=self.div_bttn: self.add_chr(char, btn))
@@ -201,10 +202,10 @@ class Application(Frame):
         self.six_bttn = Button(self, text="6", width=9, height=3, command=lambda: self.add_chr(6))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="Kyle", width=9, height=3, command=lambda: self.add_chr("Kyle"))
+        self.one_bttn = Button(self, text="D20", width=9, height=3, command=lambda: self.add_chr(randint(1,20)))
         self.one_bttn.grid(row=3, column=0)
 
-        self.two_bttn = Button(self, text="2", width=9, height=3, command=lambda: self.add_chr(2))
+        self.two_bttn = Button(self, text="D12", width=9, height=3, command=lambda: self.add_chr(randint(1,12)))
         self.two_bttn.grid(row=3, column=1)
 
         self.three_bttn = Button(self, text="3", width=9, height=3, command=lambda: self.add_chr(3))
