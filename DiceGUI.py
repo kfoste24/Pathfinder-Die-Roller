@@ -4,6 +4,7 @@ from math import sin
 from math import cos
 from math import tan 
 from random import randint
+d20 = randint(1,20)
 class Application(Frame):
     """
     An example of a calculator app developed using the 
@@ -131,7 +132,7 @@ class Application(Frame):
         master.bind("4", lambda event, char="4", btn=self.four_bttn: self.add_chr(char, btn))
         master.bind("3", lambda event, char="3", btn=self.three_bttn: self.add_chr(char, btn))
         master.bind("2", lambda event, char=randint(1,12), btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char=randint(1,20), btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char=d20, btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("0", lambda event, char="0", btn=self.zero_bttn: self.add_chr(char, btn))
         master.bind("*", lambda event, char="×", btn=self.mult_bttn: self.add_chr(char, btn))
         master.bind("/", lambda event, char="÷", btn=self.div_bttn: self.add_chr(char, btn))
