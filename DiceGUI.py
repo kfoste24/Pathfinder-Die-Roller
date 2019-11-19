@@ -124,15 +124,15 @@ class Application(Frame):
         """
         master.bind("<Return>", lambda event, btn=self.eq_bttn: self.flash(btn))
         master.bind("<BackSpace>", lambda event, btn=self.c_bttn: self.flash(btn))
-        master.bind("9", lambda event, char="9", btn=self.nine_bttn: self.add_chr(char, btn))
-        master.bind("8", lambda event, char="8", btn=self.eight_bttn: self.add_chr(char, btn))
+        master.bind("9", lambda event, char="Pathfinder Rocks!", btn=self.nine_bttn: self.add_chr(char, btn))
+        master.bind("8", lambda event, char=randint(1,100), btn=self.eight_bttn: self.add_chr(char, btn))
         master.bind("7", lambda event, char=randint(1,2), btn=self.seven_bttn: self.add_chr(char, btn))
         master.bind("6", lambda event, char=randint(1,4), btn=self.six_bttn: self.add_chr(char, btn))
         master.bind("5", lambda event, char=randint(1,6), btn=self.five_bttn: self.add_chr(char, btn))
         master.bind("4", lambda event, char=randint(1,8), btn=self.four_bttn: self.add_chr(char, btn))
         master.bind("3", lambda event, char=randint(1,10), btn=self.three_bttn: self.add_chr(char, btn))
         master.bind("2", lambda event, char=randint(1,12), btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char=d20, btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char=randint(1,20), btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("0", lambda event, char="0", btn=self.zero_bttn: self.add_chr(char, btn))
         master.bind("*", lambda event, char="×", btn=self.mult_bttn: self.add_chr(char, btn))
         master.bind("/", lambda event, char="÷", btn=self.div_bttn: self.add_chr(char, btn))
@@ -160,13 +160,13 @@ class Application(Frame):
         self.cos_bttn = Button(self, text="cos", width=20, height=3, bg="lightgrey", command=lambda: self.add_chr('cos'))
         self.cos_bttn.grid(row=3, column=6)
         """
-
+        
         self.eq_bttn = Button(self, text="=", width=20, height=3, bg="lightgrey", command=lambda: self.calculate())
         self.eq_bttn.grid(row=4, column=4, columnspan=2)
-
+        
         self.ac_bttn = Button(self, text='CE', width=9, height=3, command=lambda: self.clear_all())
         self.ac_bttn.grid(row=1, column=4)
-
+        
         self.c_bttn = Button(self, text='←', width=9, height=3, command=lambda: self.clear())
         self.c_bttn.grid(row=1, column=5 )
 
@@ -184,14 +184,14 @@ class Application(Frame):
 
         self.mod_bttn = Button(self, text="%", width=9, height=3, command=lambda: self.add_chr('%'))
         self.mod_bttn.grid(row=4, column=2)
-
+            
         self.seven_bttn = Button(self, text="Coin Flip", width=9, height=3, command=lambda: self.add_chr(randint(1,2)))
         self.seven_bttn.grid(row=1, column=0)
 
-        self.eight_bttn = Button(self, text="8", width=9, height=3, command=lambda: self.add_chr(8))
+        self.eight_bttn = Button(self, text="D100", width=9, height=3, command=lambda: self.add_chr(randint(1,100)))
         self.eight_bttn.grid(row=1, column=1)
 
-        self.nine_bttn = Button(self, text="9", width=9, height=3, command=lambda: self.add_chr(9))
+        self.nine_bttn = Button(self, text="PF", width=9, height=3, command=lambda: self.add_chr("Pathfinder Rocks!"))
         self.nine_bttn.grid(row=1, column=2)
 
         self.four_bttn = Button(self, text="D8", width=9, height=3, command=lambda: self.add_chr(randint(1,8)))
@@ -214,7 +214,7 @@ class Application(Frame):
 
         self.zero_bttn = Button(self, text="0", width=9, height=3, command=lambda: self.add_chr(0))
         self.zero_bttn.grid(row=4, column=0)
-
+        
         self.dec_bttn = Button(self, text=".", width=9, height=3, command=lambda: self.add_chr('.'))
         self.dec_bttn.grid(row=4, column=1)
 
