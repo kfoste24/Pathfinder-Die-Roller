@@ -14,7 +14,7 @@ class Application(Frame):
         """
         Frame.__init__(self, master)
         self.entry = Entry(master, width=24, font=("Arial",25))
-        self.entry.grid(row=0, column=0, columnspan=8, sticky="w")
+        self.entry.grid(row=0, column=0, columnspan=6, sticky="w")
         self.entry.focus_set()
         self.entry.configure(state="disabled", disabledbackground="white", disabledforeground="black")
         self.create_widgets()
@@ -108,43 +108,43 @@ class Application(Frame):
     
     def create_widgets(self):
         
-        self.eq_bttn = Button(self, text="=", width=40, height=4, bg="lightgrey", command=lambda: self.calculate())
+        self.eq_bttn = Button(self, text="=", width=40, height=4, bg="red", command=lambda: self.calculate())
         self.eq_bttn.grid(row=4, column=0, columnspan=6)
         
-        self.ac_bttn = Button(self, text='CE', width=9, height=4, command=lambda: self.clear_all())
+        self.ac_bttn = Button(self, text='CE', width=9, height=4, bg="blue", command=lambda: self.clear_all())
         self.ac_bttn.grid(row=1, column=4)
         
-        self.c_bttn = Button(self, text='←', width=9, height=4, command=lambda: self.clear())
+        self.c_bttn = Button(self, text='←', width=9, height=4, bg="blue", command=lambda: self.clear())
         self.c_bttn.grid(row=2, column=4 )
 
-        self.add_bttn = Button(self, text="+", width=9, height=4, command=lambda: self.add_chr('+'))
+        self.add_bttn = Button(self, text="+", width=9, height=4, bg="blue", command=lambda: self.add_chr('+'))
         self.add_bttn.grid(row=3, column=4)
             
-        self.seven_bttn = Button(self, text="Coin Flip", width=9, height=4, command=lambda: self.add_chr(randint(1,2)))
+        self.seven_bttn = Button(self, text="Coin Flip", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,2)))
         self.seven_bttn.grid(row=1, column=0)
 
-        self.eight_bttn = Button(self, text="D100", width=9, height=4, command=lambda: self.add_chr(randint(1,100)))
+        self.eight_bttn = Button(self, text="D100", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,100)))
         self.eight_bttn.grid(row=1, column=1)
 
-        self.nine_bttn = Button(self, text="PF", width=9, height=4, command=lambda: self.add_chr("Pathfinder Rocks!"))
+        self.nine_bttn = Button(self, text="PF", width=9, height=4, bg="light blue", command=lambda: self.add_chr("Pathfinder Rocks!"))
         self.nine_bttn.grid(row=1, column=2)
 
-        self.four_bttn = Button(self, text="D8", width=9, height=4, command=lambda: self.add_chr(randint(1,8)))
+        self.four_bttn = Button(self, text="D8", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,8)))
         self.four_bttn.grid(row=2, column=0)
 
-        self.five_bttn = Button(self, text="D6", width=9, height=4, command=lambda: self.add_chr(randint(1,6)))
+        self.five_bttn = Button(self, text="D6", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,6)))
         self.five_bttn.grid(row=2, column=1)
 
-        self.six_bttn = Button(self, text="D4", width=9, height=4, command=lambda: self.add_chr(randint(1,4)))
+        self.six_bttn = Button(self, text="D4", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,4)))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="D20", width=9, height=4, command=lambda: self.add_chr(randint(1,20)))
+        self.one_bttn = Button(self, text="D20", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,20)))
         self.one_bttn.grid(row=3, column=0)
 
-        self.two_bttn = Button(self, text="D12", width=9, height=4, command=lambda: self.add_chr(randint(1,12)))
+        self.two_bttn = Button(self, text="D12", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,12)))
         self.two_bttn.grid(row=3, column=1)
 
-        self.three_bttn = Button(self, text="D10", width=9, height=4, command=lambda: self.add_chr(randint(1,10)))
+        self.three_bttn = Button(self, text="D10", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,10)))
         self.three_bttn.grid(row=3, column=2)
 
        
