@@ -1,0 +1,20 @@
+Change buttons from digits to random number generators. Change the characters to run a randint instead of a fixed number.
+
+Change the lamba event characters to random numbers for using a keyboard to enter into the GUI.
+
+Delete unnessicary buttons. Left with die rolls for D2, D4, D6, D8, D10, D12, D20, D100, addition button, sum button, backspace, clear.
+
+Colorize the buttons. Make it clear and easy to tell what is where.
+
+Change the fonts of the buttons to coorispond with the color
+
+Resize the buttons to be square.
+
+Relocate the sum to span the GUI
+
+Make a function to read if the input line is empty or not and put an addtion sign in if there is already a roll in the input line.
+
+Make the function replace the randint after the lamba event from using the keyboard. Need to be able to use the keys to make unique rolls and not have the same result each press. 
+
+
+
