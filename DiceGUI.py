@@ -14,7 +14,7 @@ class Application(Frame):
         """
         Frame.__init__(self, master)
         self.entry = Entry(master, width=24, font=("Arial",25))
-        self.entry.grid(row=0, column=0, columnspan=6, sticky="w")
+        self.entry.grid(row=0, column=0, columnspan=8, sticky="w")
         self.entry.focus_set()
         self.entry.configure(state="disabled", disabledbackground="white", disabledforeground="black")
         self.create_widgets()
@@ -76,12 +76,12 @@ class Application(Frame):
     def flash(self,btn):
     
         if btn != None:
-            btn.config(bg="yellow")
+            btn.config(bg="darkblue")
             if btn == self.c_bttn:
                 self.clear()
                 self.master.after(100, lambda: btn.config(bg="SystemButtonFace"))
             elif btn == self.eq_bttn:
-                self.master.after(100, lambda: btn.config(bg="lightgrey"))
+                self.master.after(100, lambda: btn.config(bg="red"))
                 self.calculate()
             elif btn == self.ac_bttn:
                 self.clear_all()
