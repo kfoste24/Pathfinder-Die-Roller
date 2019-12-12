@@ -123,31 +123,31 @@ class Application(Frame):
         self.add_bttn = Button(self, text="+", width=9, height=4, bg="blue", command=lambda: self.add_chr('+'))
         self.add_bttn.grid(row=3, column=4)
             
-        self.seven_bttn = Button(self, text="Coin Flip", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,2)))
+        self.seven_bttn = Button(self, text="Coin Flip", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(2)))
         self.seven_bttn.grid(row=1, column=0)
 
-        self.eight_bttn = Button(self, text="D100", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,100)))
+        self.eight_bttn = Button(self, text="D100", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(100)))
         self.eight_bttn.grid(row=1, column=1)
 
         self.nine_bttn = Button(self, text="PF", width=9, height=4, bg="light blue", command=lambda: self.add_chr("Pathfinder Rocks!"))
         self.nine_bttn.grid(row=1, column=2)
 
-        self.four_bttn = Button(self, text="D8", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,8)))
+        self.four_bttn = Button(self, text="D8", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(8)))
         self.four_bttn.grid(row=2, column=0)
 
-        self.five_bttn = Button(self, text="D6", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,6)))
+        self.five_bttn = Button(self, text="D6", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(6)))
         self.five_bttn.grid(row=2, column=1)
 
-        self.six_bttn = Button(self, text="D4", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,4)))
+        self.six_bttn = Button(self, text="D4", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(4)))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="D20", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,20)))
+        self.one_bttn = Button(self, text="D20", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(20)))
         self.one_bttn.grid(row=3, column=0)
 
-        self.two_bttn = Button(self, text="D12", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,12)))
+        self.two_bttn = Button(self, text="D12", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(12)))
         self.two_bttn.grid(row=3, column=1)
 
-        self.three_bttn = Button(self, text="D10", width=9, height=4, bg="light blue", command=lambda: self.add_chr(randint(1,10)))
+        self.three_bttn = Button(self, text="D10", width=9, height=4, bg="light blue", command=lambda: self.add_chr(self.roll_die(10)))
         self.three_bttn.grid(row=3, column=2)
 
        
