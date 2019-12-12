@@ -6,9 +6,6 @@ class Application(Frame):
     An example of a Dice rolling app developed using the 
     Tkinter GUI.
     """
-    def roll_die(num_faces):
-        return randint(1,num_faces)
-
     def __init__(self, master):
         """
         Initializes the frame.
@@ -18,7 +15,7 @@ class Application(Frame):
         self.entry = Entry(master, width=16, font=("Arial",25))
         self.entry.grid(row=0, column=0, columnspan=8, sticky="w")
         self.entry.focus_set()
-        self.entry.configure(state="disabled", disabledbackground="white", disabledforeground="black")
+        self.entry.configure(state="disabled", disabledbackground="dark red", disabledforeground="black")
         self.create_widgets()
         self.bind_buttons(master)
         self.grid()
@@ -92,19 +89,23 @@ class Application(Frame):
                 self.master.after(100, lambda: btn.config(bg="SystemButtonFace"))
         else:
             pass
+    def roll_die(self,num_faces):
+        return randint(1,num_faces)
+        
+        
 
     def bind_buttons(self, master):
         master.bind("<Return>", lambda event, btn=self.eq_bttn: self.flash(btn))
         master.bind("<BackSpace>", lambda event, btn=self.c_bttn: self.flash(btn))
         master.bind("9", lambda event, char="Pathfinder Rocks!", btn=self.nine_bttn: self.add_chr(char, btn))
-        master.bind("8", lambda event, char=randint(1,100), btn=self.eight_bttn: self.add_chr(char, btn))
-        master.bind("7", lambda event, char=randint(1,2), btn=self.seven_bttn: self.add_chr(char, btn))
-        master.bind("6", lambda event, char=randint(1,4), btn=self.six_bttn: self.add_chr(char, btn))
-        master.bind("5", lambda event, char=randint(1,6), btn=self.five_bttn: self.add_chr(char, btn))
-        master.bind("4", lambda event, char=randint(1,8), btn=self.four_bttn: self.add_chr(char, btn))
-        master.bind("3", lambda event, char=randint(1,10), btn=self.three_bttn: self.add_chr(char, btn))
-        master.bind("2", lambda event, char=randint(1,12), btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char=roll_die(20), btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("8", lambda event, char=self.roll_die(100), btn=self.eight_bttn: self.add_chr(char, btn))
+        master.bind("7", lambda event, char=self.roll_die(2), btn=self.seven_bttn: self.add_chr(char, btn))
+        master.bind("6", lambda event, char=self.roll_die(4), btn=self.six_bttn: self.add_chr(char, btn))
+        master.bind("5", lambda event, char=self.roll_die(6), btn=self.five_bttn: self.add_chr(char, btn))
+        master.bind("4", lambda event, char=self.roll_die(8), btn=self.four_bttn: self.add_chr(char, btn))
+        master.bind("3", lambda event, char=self.roll_die(10), btn=self.three_bttn: self.add_chr(char, btn))
+        master.bind("2", lambda event, char=self.roll_die(12), btn=self.two_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char=self.roll_die(20), btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("+", lambda event, char="+", btn=self.add_bttn: self.add_chr(char, btn))
         master.bind("c", lambda event, btn=self.ac_bttn: self.flash(btn), self.clear_all)
     
