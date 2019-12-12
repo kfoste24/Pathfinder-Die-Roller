@@ -6,8 +6,8 @@ class Application(Frame):
     An example of a Dice rolling app developed using the 
     Tkinter GUI.
     """
-    def d20(d20):
-        randint(1,20)
+    def roll_die(num_faces):
+        return randint(1,num_faces)
 
     def __init__(self, master):
         """
@@ -104,7 +104,7 @@ class Application(Frame):
         master.bind("4", lambda event, char=randint(1,8), btn=self.four_bttn: self.add_chr(char, btn))
         master.bind("3", lambda event, char=randint(1,10), btn=self.three_bttn: self.add_chr(char, btn))
         master.bind("2", lambda event, char=randint(1,12), btn=self.two_bttn: self.add_chr(char, btn))
-        master.bind("1", lambda event, char=d20, btn=self.one_bttn: self.add_chr(char, btn))
+        master.bind("1", lambda event, char=roll_die(20), btn=self.one_bttn: self.add_chr(char, btn))
         master.bind("+", lambda event, char="+", btn=self.add_bttn: self.add_chr(char, btn))
         master.bind("c", lambda event, btn=self.ac_bttn: self.flash(btn), self.clear_all)
     
