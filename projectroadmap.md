@@ -16,7 +16,7 @@
 
 9. Make the function replace the randint after the lambda event from using the keyboard. Need to be able to use the keys to make unique rolls and not have the same result each press. **PARTIAL** Made a function that rolls using the lambda events but still can not get keystrokes to yield different outcomes.
 
-10. Edit the Project Road Map to fir the project specs. **DONE**
+10. Edit the Project Road Map to fit the project specs. **DONE**
 
 
 
