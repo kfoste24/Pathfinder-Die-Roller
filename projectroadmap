@@ -1,20 +1,20 @@
-Change buttons from digits to random number generators. Change the characters to run a randint instead of a fixed number.
+1. Change buttons from digits to random number generators. Change the characters to run a randint instead of a fixed number. **DONE**
 
-Change the lamba event characters to random numbers for using a keyboard to enter into the GUI.
+2. Change the lamba event characters to random numbers for using a keyboard to enter into the GUI. **DONE**
 
-Delete unnessicary buttons. Left with die rolls for D2, D4, D6, D8, D10, D12, D20, D100, addition button, sum button, backspace, clear.
+3. Delete unnessicary buttons. Left with die rolls for D2, D4, D6, D8, D10, D12, D20, D100, addition button, sum button, backspace, clear. **DONE**
 
-Colorize the buttons. Make it clear and easy to tell what is where.
+4. Colorize the buttons. Make it clear and easy to tell what is where. **DONE**
 
-Change the fonts of the buttons to coorispond with the color
+5. Change the fonts of the buttons to coorispond with the color **DONE**
 
-Resize the buttons to be square.
+6. Resize the buttons to be square. **DONE**
 
-Relocate the sum to span the GUI
+7. Relocate the sum to span the GUI **DONE**
 
-Make a function to read if the input line is empty or not and put an addtion sign in if there is already a roll in the input line.
+8. Make a function to read if the input line is empty or not and put an addition sign in if there is already a roll in the input line. **PARTIAL** have the function inserting the addition sign, but cant not figure out how to check if the self.entry is empty
 
-Make the function replace the randint after the lamba event from using the keyboard. Need to be able to use the keys to make unique rolls and not have the same result each press. 
+9. Make the function replace the randint after the lamba event from using the keyboard. Need to be able to use the keys to make unique rolls and not have the same result each press. **PARTIAL** Made a fuction that rolls using the lambda events but still can not get keystrokes to yeild different outcomes.
 
 
 
