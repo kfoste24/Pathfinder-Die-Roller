@@ -15,7 +15,7 @@ class Application(Frame):
         self.entry = Entry(master, width=16, font=("Times New Romans",25))
         self.entry.grid(row=0, column=0, columnspan=8, sticky="w")
         self.entry.focus_set()
-        self.entry.configure(state="disabled", disabledbackground="dark red", disabledforeground="black")
+        self.entry.configure(state="disabled", disabledbackground="red", disabledforeground="black")
         self.create_widgets()
         self.bind_buttons(master)
         self.grid()
@@ -111,7 +111,7 @@ class Application(Frame):
     
     def create_widgets(self):
         
-        self.eq_bttn = Button(self, text="=", width=40, height=4, bg="red", command=lambda: self.calculate())
+        self.eq_bttn = Button(self, text="=", width=40, height=4, bg="dark red", command=lambda: self.calculate())
         self.eq_bttn.grid(row=4, column=0, columnspan=6)
         
         self.ac_bttn = Button(self, text='CE', width=9, height=4, bg="blue", command=lambda: self.clear_all())
